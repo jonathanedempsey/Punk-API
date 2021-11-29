@@ -1,14 +1,16 @@
 import { StrictMode } from "react";
-import { ReactDOM } from "react-dom";
+import ReactDOM from "react-dom";
 
 const App = () => {
     return (
         <div>
-            <h1>Hello!</h1>
+            <h1>Hello</h1>
         </div>
     );
 };
 
+// render App in ID of root.
+// StrictMode ensures we only use safe, up to date functionality from the React API.
 ReactDOM.render(
     <StrictMode>
         <App />
