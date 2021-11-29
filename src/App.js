@@ -1,11 +1,13 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import Header from "./Header";
+import SearchParams from "./SearchParams";
 
 const App = () => {
     return (
         <div>
             <Header title="Punk API" />
+            <SearchParams />
         </div>
     );
 };
