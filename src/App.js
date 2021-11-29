@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
+import Header from "./Header";
 
 const App = () => {
     return (
         <div>
-            <h1>Hello</h1>
+            <Header title="Punk API" />
         </div>
     );
 };
