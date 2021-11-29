@@ -25,8 +25,10 @@ const SearchParams = () => {
         <div className="results">
             {beers.map((beer) => (
                 <Beer
+                    key={beer.id}
                     id={beer.id}
                     name={beer.name}
+                    image_url={beer.image_url}
                 />
             ))}
         </div>
