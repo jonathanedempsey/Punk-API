@@ -24,7 +24,10 @@ const SearchParams = () => {
     // Go to previous page of Beer results
     function prevPage(event) {
         event.preventDefault();
-        page--;
+        if(page != 1) {
+            page--;
+        }
+
         requestBeers();
     }
 
