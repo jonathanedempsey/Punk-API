@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Header";
 import SearchParams from "./SearchParams";
+import BeerSingle from "./BeerSingle";
 
 const App = () => {
     return (
@@ -11,6 +12,9 @@ const App = () => {
             <Router>
                 <Header title="Punk API" />
                 <Switch>
+                    <Route path="/beer/:id">
+                        <BeerSingle />
+                    </Route>
                     <Route path="/">
                         <SearchParams />
                     </Route>
