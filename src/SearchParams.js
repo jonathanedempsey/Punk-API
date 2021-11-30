@@ -42,18 +42,20 @@ const SearchParams = () => {
 
     return (
         <div className="results">
-            <div className="results__list">
-            {beers.map((beer) => (
-                <Beer
-                    key={beer.id}
-                    id={beer.id}
-                    name={beer.name}
-                    tagline={beer.tagline}
-                    abv={beer.abv}
-                    ibu={beer.ibu}
-                    image_url={beer.image_url}
-                />
-            ))}
+            <div className="wrapper">
+                <div className="results__list">
+                {beers.map((beer) => (
+                    <Beer
+                        key={beer.id}
+                        id={beer.id}
+                        name={beer.name}
+                        tagline={beer.tagline}
+                        abv={beer.abv}
+                        ibu={beer.ibu}
+                        image_url={beer.image_url}
+                    />
+                ))}
+                </div>
             </div>
 
             <div className="pagination">

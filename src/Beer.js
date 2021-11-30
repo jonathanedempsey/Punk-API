@@ -7,12 +7,20 @@ const Beer = (props) => {
                 <img src={props.image_url} alt="" />
             </div>
             <h3 className="card__title">{props.name} - {props.id}</h3>
-            <p className="card__tagline">{props.tagline}</p>
-            <ul className="card__stats">
-                <li>{props.abv}</li>
-                <li>{props.ibu}</li>
-            </ul>
-            <span className="card__link">More Info</span>
+            <div className="card__details">
+                <p className="card__tagline">{props.tagline}</p>
+                <ul className="card__list">
+                    <li>
+                        <span>ABV</span>
+                        {props.abv}
+                    </li>
+                    <li>
+                        <span>IBU</span>
+                        {props.ibu}
+                    </li>
+                </ul>
+                <span className="card__link">More Info</span>
+            </div>
         </Link>
     );
 };
