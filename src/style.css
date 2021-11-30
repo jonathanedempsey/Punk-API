@@ -3,6 +3,10 @@
  */
 :root {
     --black: #000;
+    --white: #fff;
+    --font-color: var(--black);
+    --brand-color-01: var(--black);
+    --brand-color-02: var(--white);
 }
 
 body {
@@ -52,7 +56,7 @@ h3 {
 
 .header .wrapper {
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--brand-color-01);
 
 }
 
@@ -86,7 +90,13 @@ h3 {
     flex-direction: column;
     text-align: center;
     text-decoration: none;
-    background-color: yellow;
+    transition: .3s;
+    color: var(--font-color);
+    border: 1px solid var(--brand-color-01);
+}
+
+.card:hover {
+    box-shadow: 5px 10px 16px #999;
 }
 
 .card__image {
@@ -139,12 +149,23 @@ h3 {
     height: 20px;
     width: 1px;
     display: block;
-    background-color: #000;
+    background-color: var(--brand-color-01);
     content: '';
 }
 
 .card__link {
     display: block;
-    background-color: pink;
+    padding: 12px 0;
+    border-top: 1px solid var(--brand-color-01);
+    transition: .3s;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card:hover .card__link {
+    background-color: var(--brand-color-01);
+    color: var(--brand-color-02);
 }
 /* end card */

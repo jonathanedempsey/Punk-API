@@ -6,9 +6,10 @@ const Beer = (props) => {
             <div className="card__image">
                 <img src={props.image_url} alt="" />
             </div>
-            <h3 className="card__title">{props.name} - {props.id}</h3>
+            <h3 className="card__title">{props.name}</h3>
+            <p className="card__tagline">{props.tagline}</p>
             <div className="card__details">
-                <p className="card__tagline">{props.tagline}</p>
+
                 <ul className="card__list">
                     <li>
                         <span>ABV</span>
