@@ -27,13 +27,12 @@ const SearchParams = () => {
         if(page != 1) {
             page--;
         }
-
         requestBeers();
     }
 
     async function requestBeers() {
         const response = await fetch(
-            `https://api.punkapi.com/v2/beers?page=${page}&per_page=5`
+            `https://api.punkapi.com/v2/beers?page=${page}&per_page=12`
         );
         const json = await response.json();
 
@@ -49,6 +48,9 @@ const SearchParams = () => {
                     key={beer.id}
                     id={beer.id}
                     name={beer.name}
+                    tagline={beer.tagline}
+                    abv={beer.abv}
+                    ibu={beer.ibu}
                     image_url={beer.image_url}
                 />
             ))}
