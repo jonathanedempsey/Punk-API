@@ -7,18 +7,17 @@ class BeerSingle extends Component {
 
     async componentDidMount() {
         // console.log(`id = ${this.props.match.params.id}`);
-        const beerId = this.props.match.params.id - 1;
+        const beerId = this.props.match.params.id;
         const res = await fetch(
-            `https://api.punkapi.com/v2/beers?id=${beerId}`
+            `https://api.punkapi.com/v2/beers/${beerId}`
         );
         const json = await res.json();
-        this.setState(Object.assign({ loading: false }, json[beerId]));
+        this.setState(Object.assign({ loading: false }, json[0]));
     }
 
     render () {
-        console.log(this.state);
-
-        const { abv, brewers_tips, description, first_brewed, food_pairing, ibu, id, image_url, name, tagline } = this.state;
+        // console.log(this.state);
+        const { abv, brewers_tips, description, first_brewed, food_pairing, ibu, image_url, name, tagline } = this.state;
 
         return (
             <div className="beer__single">
