@@ -32,7 +32,7 @@ const SearchParams = () => {
 
     async function requestBeers() {
         const response = await fetch(
-            `https://api.punkapi.com/v2/beers?page=${page}&per_page=12`
+            `https://api.punkapi.com/v2/beers?page=${page}&per_page=8`
         );
         const json = await response.json();
 
@@ -59,9 +59,9 @@ const SearchParams = () => {
             </div>
 
             <div className="pagination">
-                <button id="prev-page" onClick={ prevPage }>Prev</button>
+                <button id="prev-page" className="btn" onClick={ prevPage }>Prev</button>
                 <span>{page}</span>
-                <button id="next-page" onClick={ nextPage }>Next</button>
+                <button id="next-page" className="btn" onClick={ nextPage }>Next</button>
             </div>
         </div>
     );
