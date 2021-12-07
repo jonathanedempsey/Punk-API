@@ -188,6 +188,7 @@ h3 {
 }
 /* end card */
 
+
 /**
  * pagination
  */
@@ -206,3 +207,12 @@ h3 {
     font-weight: bold;
 }
 /* end pagination */
+
+
+/**
+ * beer single
+ */
+.beer__single {
+    padding: 30px 5%;
+}
+/* end beer single */
