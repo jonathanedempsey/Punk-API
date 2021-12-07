@@ -9,7 +9,6 @@ const Beer = (props) => {
             <h3 className="card__title">{props.name}</h3>
             <p className="card__tagline">{props.tagline}</p>
             <div className="card__details">
-
                 <ul className="card__list">
                     <li>
                         <span>ABV</span>
