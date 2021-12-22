@@ -19,6 +19,7 @@ const SearchParams = () => {
         event.preventDefault();
         page++;
         requestBeers();
+        window.scrollTo(0, 0);
     }
 
     // Go to previous page of Beer results
@@ -28,11 +29,12 @@ const SearchParams = () => {
             page--;
         }
         requestBeers();
+        window.scrollTo(0, 0);
     }
 
     async function requestBeers() {
         const response = await fetch(
-            `https://api.punkapi.com/v2/beers?page=${page}&per_page=8`
+            `https://api.punkapi.com/v2/beers?page=${page}&per_page=12`
         );
         const json = await response.json();
 
