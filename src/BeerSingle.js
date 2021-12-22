@@ -18,7 +18,7 @@ class BeerSingle extends Component {
     render () {
         // console.log(this.state);
         const { abv, brewers_tips, description, first_brewed, food_pairing, ibu, image_url, name, tagline } = this.state;
-        const food_pairing_split = [food_pairing].join(', ').replace(/,(?=[^\s])/g, ", ");
+        const food_pairing_split = [food_pairing].join().replace(/,(?=[^\s])/g, ", ");
 
         return (
             <div className="beer__single">
